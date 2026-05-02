@@ -1,0 +1,10 @@
+.container {
+  width: min(940px, 90%);
+  margin-inline: auto;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 92%;
+  }
+}

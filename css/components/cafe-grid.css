@@ -1,0 +1,224 @@
+/* Café Spots Section */
+
+.spots-section {
+  padding-bottom: 100px;
+}
+
+.spots-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.spots-header .section-intro {
+  margin: 0;
+  flex: 1;
+  min-width: 260px;
+}
+
+/* ── Mood filter tabs ── */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-self: flex-end;
+  padding-bottom: 4px;
+}
+
+.filter-btn {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-surface-alt);
+  color: var(--color-ink-soft);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.filter-btn:hover {
+  border-color: var(--color-accent-pale);
+  color: var(--color-accent);
+  background: var(--color-surface-alt);
+}
+
+.filter-btn.active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff8f0;
+  box-shadow: 0 4px 14px rgba(139, 94, 60, 0.30);
+}
+
+/* ── Flexbox café grid ── */
+.cafe-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+/* ── Individual café card ── */
+.cafe-card {
+  flex-basis: 270px;
+  flex-grow: 1;
+  max-width: calc(33.333% - 14px);
+  background: var(--color-surface-alt);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.26s ease, box-shadow 0.26s ease, border-color 0.26s ease;
+  position: relative;
+}
+
+.cafe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent-pale);
+}
+
+/* The image wrapper with aspect-ratio lock */
+.cafe-card__img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-accent-pale);
+}
+
+.cafe-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.cafe-card:hover .cafe-card__img-wrap img {
+  transform: scale(1.06);
+}
+
+/* Rating badge overlaid on image */
+.cafe-card__rating {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(253, 248, 242, 0.94);
+  backdrop-filter: blur(6px);
+  border-radius: 999px;
+  padding: 4px 10px 4px 8px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-ink);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 8px rgba(44, 29, 18, 0.14);
+  letter-spacing: 0.01em;
+}
+
+/* Mood tag overlaid bottom-left */
+.cafe-card__mood {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: var(--color-accent);
+  color: #fff8f0;
+  border-radius: 999px;
+  padding: 4px 11px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Card body */
+.cafe-card__body {
+  padding: 20px 20px 22px;
+}
+
+.cafe-card__body h3 {
+  font-size: 18px;
+  margin: 0 0 4px;
+  color: var(--color-ink);
+}
+
+.cafe-card__location {
+  font-size: 13.5px;
+  color: var(--color-ink-muted);
+  font-family: var(--font-body);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+
+.cafe-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.cafe-card__tag {
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  color: var(--color-ink-soft);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 3px 9px;
+}
+
+/* Hidden state when filtered out */
+.cafe-card.hidden {
+  display: none;
+}
+
+/* No results message */
+.cafe-grid__empty {
+  display: none;
+  width: 100%;
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--color-ink-muted);
+  font-size: 16px;
+  font-family: var(--font-body);
+}
+
+.cafe-grid__empty.visible {
+  display: block;
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .cafe-card {
+    max-width: calc(50% - 10px);
+  }
+
+  .spots-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 540px) {
+  .cafe-card {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .filter-bar {
+    gap: 6px;
+  }
+}

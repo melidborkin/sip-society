@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sip Society</title>
+    <meta name="description" content="Sip Society is a curated coffee guide for cozy cafés, slow mornings and creative work sessions.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+
+    <div class="banner">
+      <div class="container">
+        <span class="banner__eyebrow">Est. 2024 · Coffee Culture</span>
+        <h1>Sip<br>Society</h1>
+        <p>A curated coffee guide for cozy cafés,<br>slow mornings and creative work sessions.</p>
+        <a href="#discover" class="btn-coffee">
+          Explore coffee spots
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="container" id="discover">
+
+      <div class="section-intro">
+        <span class="section-label">Why Sip Society</span>
+        <h2>For coffee lovers<br>with good taste</h2>
+        <p>
+          Sip Society helps you discover cafés that are not only good for coffee,
+          but also for studying, working, reading or having a calm moment in the city.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Cozy corners</h3>
+          <p>Find warm and quiet cafés where you can sit for hours without feeling rushed.</p>
+        </div>
+
+        <div class="card">
+          <h3>Work-friendly cafés</h3>
+          <p>Discover places with Wi-Fi, plugs, good tables and the right amount of background noise.</p>
+        </div>
+
+        <div class="card">
+          <h3>Curated vibes</h3>
+          <p>Filter by mood: study date, solo coffee, catch-up with friends or creative reset.</p>
+        </div>
+      </div>
+
+      <div class="founder-card">
+        <img src="images/avatar.jpeg" alt="Melina Dborkin" class="avatar">
+        <div class="founder-card__text">
+          <span class="section-label">The founder</span>
+          <h2>Made by a coffee lover</h2>
+          <p>
+            Sip Society was created by Melina, a digital technology student who loves coffee,
+            design and building useful experiences with a warm aesthetic.
+          </p>
+        </div>
+      </div>
+
+    </div><!-- /container (discover) -->
+
+    <!-- ── Café Spots Grid ── -->
+    <div class="container spots-section" id="spots">
+
+      <div class="spots-header">
+        <div class="section-intro">
+          <span class="section-label">Coffee spots</span>
+          <h2>Cafés hand-picked<br>for every mood</h2>
+          <p>Real places, curated with care. Filter by what you need today.</p>
+        </div>
+
+        <div class="filter-bar" role="group" aria-label="Filter by mood">
+          <button class="filter-btn active" data-filter="all">All spots</button>
+          <button class="filter-btn" data-filter="study">Study</button>
+          <button class="filter-btn" data-filter="solo">Solo</button>
+          <button class="filter-btn" data-filter="social">Social</button>
+          <button class="filter-btn" data-filter="remote">Remote</button>
+        </div>
+      </div>
+
+      <div class="cafe-grid" id="cafeGrid">
+
+        <div class="cafe-card" data-mood="study remote">
+          <div class="cafe-card__img-wrap">
+            <img src="images/cortado.png" alt="Cortado">
+            <span class="cafe-card__rating">⭐ 4.9</span>
+            <span class="cafe-card__mood">Social</span>
+          </div>
+          <div class="cafe-card__body">
+            <h3>Cortado</h3>
+            <div class="cafe-card__location">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5A4.5 4.5 0 0 1 12.5 6c0 3-4.5 8.5-4.5 8.5S3.5 9 3.5 6A4.5 4.5 0 0 1 8 1.5Z" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="6" r="1.5" fill="currentColor"/></svg>
+              Paris, 3e
+            </div>
+            <div class="cafe-card__tags">
+              <span class="cafe-card__tag">Plugs</span>
+              <span class="cafe-card__tag">Music</span>
+              <span class="cafe-card__tag">Window seat</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cafe-card" data-mood="solo">
+          <div class="cafe-card__img-wrap">
+            <img src="images/constant.png" alt="Constant">
+            <span class="cafe-card__rating">⭐ 5.0</span>
+            <span class="cafe-card__mood">Solo</span>
+          </div>
+          <div class="cafe-card__body">
+            <h3>Constant</h3>
+            <div class="cafe-card__location">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5A4.5 4.5 0 0 1 12.5 6c0 3-4.5 8.5-4.5 8.5S3.5 9 3.5 6A4.5 4.5 0 0 1 8 1.5Z" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="6" r="1.5" fill="currentColor"/></svg>
+              Paris, 7e
+            </div>
+            <div class="cafe-card__tags">
+              <span class="cafe-card__tag">Quiet</span>
+              <span class="cafe-card__tag">Books</span>
+              <span class="cafe-card__tag">Pastries</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cafe-card" data-mood="remote study">
+          <div class="cafe-card__img-wrap">
+            <img src="images/buddybuddy.png" alt="Buddy Buddy">
+            <span class="cafe-card__rating">⭐ 4.5</span>
+            <span class="cafe-card__mood">Study</span>
+          </div>
+          <div class="cafe-card__body">
+            <h3>Buddy Buddy</h3>
+            <div class="cafe-card__location">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5A4.5 4.5 0 0 1 12.5 6c0 3-4.5 8.5-4.5 8.5S3.5 9 3.5 6A4.5 4.5 0 0 1 8 1.5Z" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="6" r="1.5" fill="currentColor"/></svg>
+              Paris, 10e
+            </div>
+            <div class="cafe-card__tags">
+              <span class="cafe-card__tag">Standing desks</span>
+              <span class="cafe-card__tag">Plugs</span>
+              <span class="cafe-card__tag">Fiber Wi-Fi</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cafe-card" data-mood="solo">
+          <div class="cafe-card__img-wrap">
+            <img src="images/nuances.png" alt="Nuances">
+            <span class="cafe-card__rating">⭐ 4.7</span>
+            <span class="cafe-card__mood">Solo</span>
+          </div>
+          <div class="cafe-card__body">
+            <h3>Nuances</h3>
+            <div class="cafe-card__location">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5A4.5 4.5 0 0 1 12.5 6c0 3-4.5 8.5-4.5 8.5S3.5 9 3.5 6A4.5 4.5 0 0 1 8 1.5Z" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="6" r="1.5" fill="currentColor"/></svg>
+              Paris, 4e
+            </div>
+            <div class="cafe-card__tags">
+              <span class="cafe-card__tag">Books</span>
+              <span class="cafe-card__tag">Window seat</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cafe-card" data-mood="social study">
+          <div class="cafe-card__img-wrap">
+            <img src="images/noir.png" alt="Noir">
+            <span class="cafe-card__rating">⭐ 4.9</span>
+            <span class="cafe-card__mood">Study</span>
+          </div>
+          <div class="cafe-card__body">
+            <h3>Noir</h3>
+            <div class="cafe-card__location">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5A4.5 4.5 0 0 1 12.5 6c0 3-4.5 8.5-4.5 8.5S3.5 9 3.5 6A4.5 4.5 0 0 1 8 1.5Z" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="6" r="1.5" fill="currentColor"/></svg>
+              Paris, 17e
+            </div>
+            <div class="cafe-card__tags">
+              <span class="cafe-card__tag">Silent zone</span>
+              <span class="cafe-card__tag">Plugs</span>
+              <span class="cafe-card__tag">Plants</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cafe-card" data-mood="social remote solo">
+          <div class="cafe-card__img-wrap">
+            <img src="images/rosebakery.png" alt="Rose Bakery">
+            <span class="cafe-card__rating">⭐ 4.9</span>
+            <span class="cafe-card__mood">Remote</span>
+          </div>
+          <div class="cafe-card__body">
+            <h3>Rose Bakery</h3>
+            <div class="cafe-card__location">
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5A4.5 4.5 0 0 1 12.5 6c0 3-4.5 8.5-4.5 8.5S3.5 9 3.5 6A4.5 4.5 0 0 1 8 1.5Z" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="6" r="1.5" fill="currentColor"/></svg>
+              Paris, 16e
+            </div>
+            <div class="cafe-card__tags">
+              <span class="cafe-card__tag">Quiet</span>
+              <span class="cafe-card__tag">Lunch options</span>
+              <span class="cafe-card__tag">Cozy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cafe-grid__empty" id="gridEmpty">
+          No cafés match this mood yet — more spots coming soon! ☕
+        </div>
+
+      </div><!-- /cafe-grid -->
+
+    </div><!-- /spots-section -->
+
+    <!-- Suggest a Cafe -->
+    <section class="suggest-section" id="suggest">
+    <div class="container">
+      <div class="suggest-inner">
+        <div class="suggest-form-wrap">
+          <div data-tf-live="01KQMQJ292J9PFG2DVE8T87RHY"></div>
+          <script src="//embed.typeform.com/next/embed.js"></script>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <script>
+      var filterBtns = document.querySelectorAll('.filter-btn');
+      var cafeGrid = document.getElementById('cafeGrid');
+      var emptyMsg = document.getElementById('gridEmpty');
+
+      function applyFilter(filter) {
+        var cards = cafeGrid.querySelectorAll('.cafe-card');
+        var visible = 0;
+        cards.forEach(function(card) {
+          var moods = card.dataset.mood || '';
+          var match = filter === 'all' || moods.includes(filter);
+          card.classList.toggle('hidden', !match);
+          if (match) visible++;
+        });
+        emptyMsg.classList.toggle('visible', visible === 0);
+      }
+
+      filterBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          filterBtns.forEach(function(b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          applyFilter(btn.dataset.filter);
+        });
+      });
+
+      document.querySelectorAll('.form-check-label').forEach(function(label) {
+        label.addEventListener('click', function() {
+          label.classList.toggle('checked');
+        });
+      });
+
+      document.getElementById('submitBtn').addEventListener('click', function() {
+        var name = document.getElementById('cafe-name').value.trim();
+        var city = document.getElementById('cafe-city').value.trim();
+        var mood = document.getElementById('cafe-mood').value;
+        var rating = document.getElementById('cafe-rating').value;
+
+        if (!name || !city || !mood || !rating) {
+          ['cafe-name','cafe-city','cafe-mood','cafe-rating'].forEach(function(id) {
+            var el = document.getElementById(id);
+            if (!el.value.trim()) {
+              el.style.borderColor = '#c0392b';
+              setTimeout(function() { el.style.borderColor = ''; }, 1200);
+            }
+          });
+          return;
+        }
+
+        var features = [];
+        document.querySelectorAll('.form-check-label.checked').forEach(function(l) {
+          features.push(l.textContent.trim());
+        });
+        features = features.slice(0, 4);
+
+        var moodLabels = { study:'Study', solo:'Solo', social:'Social', remote:'Remote' };
+        var pinSvg = '<svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 1.5A4.5 4.5 0 0 1 12.5 6c0 3-4.5 8.5-4.5 8.5S3.5 9 3.5 6A4.5 4.5 0 0 1 8 1.5Z" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="6" r="1.5" fill="currentColor"/></svg>';
+        var tagsHTML = features.length
+          ? features.map(function(f) { return '<span class="cafe-card__tag">' + f + '</span>'; }).join('')
+          : '<span class="cafe-card__tag">Community pick</span>';
+
+        var card = document.createElement('div');
+        card.className = 'cafe-card cafe-card--new';
+        card.dataset.mood = mood;
+        card.innerHTML =
+          '<div class="cafe-card__img-wrap cafe-card__img-wrap--placeholder">' +
+            '<div class="cafe-card__placeholder-img">☕</div>' +
+            '<span class="cafe-card__rating">star ' + rating + '</span>' +
+            '<span class="cafe-card__mood">' + moodLabels[mood] + '</span>' +
+          '</div>' +
+          '<div class="cafe-card__body">' +
+            '<h3>' + name + '</h3>' +
+            '<div class="cafe-card__location">' + pinSvg + ' ' + city + '</div>' +
+            '<div class="cafe-card__tags">' + tagsHTML + '</div>' +
+          '</div>';
+
+        cafeGrid.insertBefore(card, emptyMsg);
+
+        filterBtns.forEach(function(b) { b.classList.remove('active'); });
+        document.querySelector('[data-filter="all"]').classList.add('active');
+        applyFilter('all');
+        document.getElementById('spots').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        document.getElementById('successName').textContent = name;
+        var success = document.getElementById('formSuccess');
+        success.classList.add('visible');
+
+        ['cafe-name','cafe-city','cafe-note'].forEach(function(id) { document.getElementById(id).value = ''; });
+        document.getElementById('cafe-mood').selectedIndex = 0;
+        document.getElementById('cafe-rating').selectedIndex = 0;
+        document.querySelectorAll('.form-check-label.checked').forEach(function(l) { l.classList.remove('checked'); });
+
+        setTimeout(function() { success.classList.remove('visible'); }, 5000);
+      });
+    </script>
+
+    <style>
+      @keyframes cardPop {
+        from { opacity: 0; transform: scale(0.88) translateY(16px); }
+        to   { opacity: 1; transform: scale(1) translateY(0); }
+      }
+      .cafe-card--new {
+        animation: cardPop 0.4s cubic-bezier(.34,1.56,.64,1) both;
+      }
+      .cafe-card__img-wrap--placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #e8d4c0, #d4b896);
+      }
+      .cafe-card__placeholder-img {
+        font-size: 52px;
+        opacity: 0.55;
+      }
+    </style>
+
+  </body>
+</html>
